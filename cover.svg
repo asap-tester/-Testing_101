@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&amp;family=DM+Mono:wght@500&amp;display=swap');
+    </style>
+
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#111111"/>
+    </linearGradient>
+
+    <!-- Accent glow -->
+    <radialGradient id="glowGrad" cx="30%" cy="60%" r="55%">
+      <stop offset="0%" style="stop-color:#c8f135;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#181818"/>
+      <stop offset="100%" style="stop-color:#111111"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <clipPath id="cardClip">
+      <rect x="60" y="60" width="680" height="380" rx="6"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Grid lines horizontal -->
+  <g stroke="#1e1e1e" stroke-width="1" opacity="0.8">
+    <line x1="0" y1="52" x2="800" y2="52"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="148" x2="800" y2="148"/>
+    <line x1="0" y1="196" x2="800" y2="196"/>
+    <line x1="0" y1="244" x2="800" y2="244"/>
+    <line x1="0" y1="292" x2="800" y2="292"/>
+    <line x1="0" y1="340" x2="800" y2="340"/>
+    <line x1="0" y1="388" x2="800" y2="388"/>
+    <line x1="0" y1="436" x2="800" y2="436"/>
+    <line x1="0" y1="484" x2="800" y2="484"/>
+  </g>
+
+  <!-- Grid lines vertical -->
+  <g stroke="#1e1e1e" stroke-width="1" opacity="0.8">
+    <line x1="48" y1="0" x2="48" y2="500"/>
+    <line x1="96" y1="0" x2="96" y2="500"/>
+    <line x1="144" y1="0" x2="144" y2="500"/>
+    <line x1="192" y1="0" x2="192" y2="500"/>
+    <line x1="240" y1="0" x2="240" y2="500"/>
+    <line x1="288" y1="0" x2="288" y2="500"/>
+    <line x1="336" y1="0" x2="336" y2="500"/>
+    <line x1="384" y1="0" x2="384" y2="500"/>
+    <line x1="432" y1="0" x2="432" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="528" y1="0" x2="528" y2="500"/>
+    <line x1="576" y1="0" x2="576" y2="500"/>
+    <line x1="624" y1="0" x2="624" y2="500"/>
+    <line x1="672" y1="0" x2="672" y2="500"/>
+    <line x1="720" y1="0" x2="720" y2="500"/>
+    <line x1="768" y1="0" x2="768" y2="500"/>
+  </g>
+
+  <!-- Glow blob -->
+  <rect width="800" height="500" fill="url(#glowGrad)"/>
+
+  <!-- Accent circle blur decoration -->
+  <circle cx="160" cy="310" r="120" fill="#c8f135" opacity="0.05" filter="url(#softglow)"/>
+  <circle cx="640" cy="180" r="80" fill="#c8f135" opacity="0.04" filter="url(#softglow)"/>
+
+  <!-- Card -->
+  <rect x="60" y="60" width="680" height="380" rx="6" fill="url(#cardGrad)" stroke="#2a2a2a" stroke-width="1"/>
+
+  <!-- Card inner top accent bar -->
+  <rect x="60" y="60" width="680" height="3" rx="0" fill="#c8f135" opacity="0.9"/>
+
+  <!-- Decorative corner marks -->
+  <g stroke="#c8f135" stroke-width="1.5" opacity="0.6">
+    <!-- Top left -->
+    <line x1="60" y1="80" x2="60" y2="63"/>
+    <line x1="60" y1="63" x2="80" y2="63"/>
+    <!-- Top right -->
+    <line x1="740" y1="80" x2="740" y2="63"/>
+    <line x1="740" y1="63" x2="720" y2="63"/>
+    <!-- Bottom left -->
+    <line x1="60" y1="420" x2="60" y2="437"/>
+    <line x1="60" y1="437" x2="80" y2="437"/>
+    <!-- Bottom right -->
+    <line x1="740" y1="420" x2="740" y2="437"/>
+    <line x1="740" y1="437" x2="720" y2="437"/>
+  </g>
+
+  <!-- Tag row -->
+  <circle cx="108" cy="118" r="4" fill="#c8f135" filter="url(#glow)">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="120" y="123" font-family="'DM Mono', monospace" font-size="11" fill="#c8f135" letter-spacing="2" font-weight="500">GITHUB REPOSITORY</text>
+
+  <!-- Main heading -->
+  <text x="100" y="195" font-family="'Syne', 'Arial Black', sans-serif" font-size="72" font-weight="800" fill="#f0f0f0" letter-spacing="-2">Hello,</text>
+  <text x="100" y="270" font-family="'Syne', 'Arial Black', sans-serif" font-size="72" font-weight="800" fill="#c8f135" letter-spacing="-2" filter="url(#glow)">World.</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#1e1e1e" stroke-width="1"/>
+
+  <!-- Meta boxes -->
+  <!-- Box 1 -->
+  <rect x="100" y="318" width="130" height="68" rx="3" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="114" y="337" font-family="'DM Mono', monospace" font-size="9" fill="#555" letter-spacing="1.5">STATUS</text>
+  <text x="114" y="360" font-family="'Syne', sans-serif" font-size="15" font-weight="700" fill="#f0f0f0">Active</text>
+
+  <!-- Box 2 -->
+  <rect x="246" y="318" width="130" height="68" rx="3" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="260" y="337" font-family="'DM Mono', monospace" font-size="9" fill="#555" letter-spacing="1.5">TYPE</text>
+  <text x="260" y="360" font-family="'Syne', sans-serif" font-size="15" font-weight="700" fill="#f0f0f0">SVG File</text>
+
+  <!-- Box 3 -->
+  <rect x="392" y="318" width="130" height="68" rx="3" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="406" y="337" font-family="'DM Mono', monospace" font-size="9" fill="#555" letter-spacing="1.5">AUTHOR</text>
+  <text x="406" y="360" font-family="'Syne', sans-serif" font-size="15" font-weight="700" fill="#f0f0f0">Me</text>
+
+  <!-- Box 4 -->
+  <rect x="538" y="318" width="130" height="68" rx="3" fill="#161616" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="552" y="337" font-family="'DM Mono', monospace" font-size="9" fill="#555" letter-spacing="1.5">YEAR</text>
+  <text x="552" y="360" font-family="'Syne', sans-serif" font-size="15" font-weight="700" fill="#c8f135">2026</text>
+
+  <!-- Footer row -->
+  <text x="100" y="422" font-family="'DM Mono', monospace" font-size="10" fill="#444">cover.svg</text>
+  <text x="670" y="422" font-family="'DM Mono', monospace" font-size="10" fill="#444" text-anchor="end">v1.0.0</text>
+
+  <!-- Decorative right-side element -->
+  <g opacity="0.15">
+    <rect x="680" y="120" width="40" height="2" fill="#c8f135"/>
+    <rect x="700" y="130" width="20" height="2" fill="#c8f135"/>
+    <rect x="690" y="140" width="30" height="2" fill="#c8f135"/>
+  </g>
+</svg>
